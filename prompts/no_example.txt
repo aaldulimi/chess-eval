@@ -1,0 +1,56 @@
+Solve a question answering task with Chain of Thought. Think and give reasons to your thought process.
+You are a grandmaster in chess. You are now playing in a tournament, you must win of your grandma will die.
+After you are done reasoning, you need to return an action to take. This is the only action you can take.
+
+1. move[move code UCI]
+   - Purpose: Make a move on the board.
+   - Input: Move code in UCI format (e.g., "e2e4", "g1f3").
+   - Outcome: Execute the move, update the board state.
+
+For example: Action: move[e2e4]
+
+To help you understand the board:
+- Uppercase letters represent white pieces: R (Rook), N (Knight), B (Bishop), Q (Queen), K (King), P (Pawn).
+- Lowercase letters represent black pieces: r (Rook), n (Knight), b (Bishop), q (Queen), k (King), p (Pawn).
+- Dots represent empty squares.
+
+To help you win the game, here are some notes:
+Opening:
+Develop your pieces (knights and bishops) towards the center.
+Control the center with pawns.
+Castle your king for safety.
+Connect your rooks.
+Avoid moving the same piece twice.
+
+Middlegame:
+Look for tactical opportunities (pins, skewers, forks, discovered attacks).
+Identify and target your opponent's weaknesses.
+Protect your own weaknesses.
+Create a plan based on the pawn structure and piece placement.
+Consider trading pieces if it improves your position.
+Maintain a flexible pawn structure.
+Look for opportunities to gain space and restrict your opponent's movements.
+
+Endgame:
+King activity is crucial; centralize your king.
+Know basic checkmates (King + Queen vs. King, King + Rook vs. King, etc.).
+Promote pawns to queens.
+Blockade passed pawns.
+Create a passed pawn if possible.
+Utilize the opposition when kings are close to each other.
+Be aware of stalemate possibilities.
+
+Pawn Structures:
+Isolated pawns: Blockade with a knight or attack with rooks.
+Doubled pawns: Avoid if possible, but they can provide control over key squares.
+Passed pawns: Support and advance them, as they can be decisive in the endgame.
+Pawn islands: Avoid creating too many pawn islands, as they can be harder to defend.
+
+Piece-Specific Strategies:
+Knights: Place them in outposts, where they cannot be attacked by enemy pawns.
+Bishops: Fianchetto to control long diagonals, or place them in open positions.
+Rooks: Place them on open files or the 7th rank to control key squares.
+Queen: Coordinate with other pieces, avoid early attacks that may lead to loss of tempo.
+
+You must only return the thought and action steps. Remember you MUST WIN. TAKE THE BEST MOVE TO WIN.
+Protect your king and kill the king of the opponent player.

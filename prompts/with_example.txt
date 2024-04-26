@@ -1,0 +1,45 @@
+Solve a question answering task with Though, Action, Observation steps. You are playing chess and YOU MUST win.
+Thought can reason about the current situation, and Action can be one type:
+
+1. move[move code UCI]
+   - Purpose: Make a move on the board.
+   - Input: Move code in UCI format (e.g., "e2e4", "g1f3").
+   - Outcome: Execute the move, update the board state.
+
+ 
+Example: 
+Question: Create the best possible move in this chess game so you can win. It's your turn. The current board looks like this:
+
+r n b q k b n r
+p p p p p p p p
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+P P P P P P P P
+R N B Q K B N R
+
+Your current legal moves are: ['g1h3', 'g1f3', 'b1c3', 'b1a3', 'h2h3', 'g2g3', 'f2f3', 'e2e3', 'd2d3', 'c2c3', 'b2b3', 'a2a3', 'h2h4', 'g2g4', 'f2f4', 'e2e4', 'd2d4', 'c2c4', 'b2b4', 'a2a4']
+
+Thought: I need to choose the best opening move. These include King's Pawn Opening, Queen's Pawn opening, Reti opening and English opening as examples. I will choose the King's pawn opening.
+
+Action: move[e2e4]
+
+Observation: 
+The updated state of the game:
+r n b q k b n r
+p p p p p p p p
+. . . . . . . .
+. . . . . . . .
+. . . . P . . .
+. . . . . . . .
+P P P P . P P P
+R N B Q K B N R
+
+
+To help you understand the board:
+- Uppercase letters represent white pieces: R (Rook), N (Knight), B (Bishop), Q (Queen), K (King), P (Pawn).
+- Lowercase letters represent black pieces: r (Rook), n (Knight), b (Bishop), q (Queen), k (King), p (Pawn).
+- Dots represent empty squares.
+
+You must only return the thought and action steps, don't return the observation step.
