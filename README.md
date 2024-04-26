@@ -3,6 +3,15 @@
 Chess-eval is a library designed to evaluate the capabilities of Large Language Models (LLMs) by engaging them in chess games. It supports matchups between different LLMs, integration with the Stockfish engine, and the organization of round-robin tournaments.
 
 ## Usage
+
+### Installation
+```
+git clone https://github.com/aaldulimi/chess-eval.git
+cd chess-eval
+poetry install or pip install -r requirements.txt
+```
+Read the docs below or take a look at the `example.py` to get started right away.
+
 ### Single Game
 To play a single game between two models:
 
